@@ -1,0 +1,46 @@
+body {
+	margin: 0;
+}
+
+.product__logo {
+	width: 120px;
+	height: auto;
+}
+.hero-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+	/* Extra Small (xs) screens and below */
+	.product__logo__a__responsive {
+		display: none !important;
+		margin-right: 1px !important; /* You can specify the unit you want */
+	}
+}
+
+@media screen and (min-width: 768px) {
+	/* Medium (md) screens and above */
+	.product__logo__a__responsive {
+		display: flex !important;
+		margin-right: 1px !important; /* You can specify the unit you want */
+	}
+}
+@media screen and (max-width: 767px) {
+	/* Extra Small (xs) screens and below */
+	.product__logo__b__responsive {
+		display: flex !important;
+		margin-right: 1px !important; /* You can specify the unit you want */
+	}
+}
+
+@media screen and (min-width: 768px) {
+	/* Medium (md) screens and above */
+	.product__logo__b__responsive {
+		display: none !important;
+		margin-right: 1px !important; /* You can specify the unit you want */
+	}
+}
