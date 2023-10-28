@@ -20,115 +20,128 @@ export default function AccountingOutsourcing() {
   const contactRef = useRef();
   const whyHireUpPoints = [
     {
-      title: "Customized for every business need",
-      subtitle: "Service tailor-made for the specific need of your business.",
-      caption: "Focus on Core",
-      value: 36,
-      progress: 88,
-      color: "primary",
-    },
-    {
-      title: "Competitive Pricing",
-      subtitle: "Competitive pricing in comparison to all other alternatives.",
-      caption: "Reduce Cost",
-      value: 36,
-      progress: 88,
-      color: "secondary",
-    },
-    {
-      title: "Experienced Professional",
-      subtitle: "Highly qualified and experienced accountant at your service.",
-      caption: "Improve Quality",
-      value: 13,
-      progress: 36,
-      color: "accent",
-    },
-    {
-      title: "Market Advantage",
+      title: "Cost Savings",
       subtitle:
-        "Bring scalability to your business providing a competitive advantage.",
-      caption: "Conserve Capita",
-      value: 10,
-      progress: 30,
-      color: "text",
+        " Outsourcing accounting can significantly reduce operational costs, as you don't need to hire and train in-house staff or invest in accounting software and infrastructure.",
+      caption: "Reduce expenses",
     },
     {
-      title: "Dedicated Support",
+      title: "Access to Expertise",
       subtitle:
-        "Dedicated support by our experienced professionals for your assistance.",
-      caption: "Market Advantage",
-      value: 5,
-      progress: 20,
-      color: "secondary",
+        "Accounting firms specialize in financial matters, providing you with access to a team of experienced professionals who stay updated on the latest industry regulations",
+      caption: "Access skilled professionals",
     },
     {
-      title: "Technology Driven",
+      title: "Focus on Core Activities",
       subtitle:
-        "Use of technology to its full potential to serve customers across the globe.",
-      caption: "Foster Innovation",
-      value: 4,
-      progress: 15,
-      color: "primary",
+        "Outsourcing allows your business to focus on core activities and strategic goals, freeing up time and resources for growth and development",
+      caption: "Concentrate on core business",
+    },
+    {
+      title: "Scalability",
+      subtitle:
+        "Accounting outsourcing services can be tailored to your business needs. You can scale services up or down as your business evolves",
+      caption: "Adapt to growth easily",
+    },
+    {
+      title: "Enhanced Data Security",
+      subtitle:
+        "Reputable outsourcing providers have robust data security measures in place, ensuring the confidentiality and protection of your financial data",
+      caption: "Protect sensitive data",
+    },
+    {
+      title: "Timely Financial Reporting",
+      subtitle:
+        "Outsourced accountants can help you generate accurate financial reports and statements on time, aiding in decision-making and compliance.",
+      caption: "Get faster insights",
+    },
+    {
+      title: "Regulatory Compliance",
+      subtitle:
+        "Experts in accounting outsourcing are well-versed in local and international regulations, ensuring that your business remains compliant with tax laws and reporting requirements.",
+      caption: "Reduce compliance risks",
+    },
+    {
+      title: "Reduced Errors",
+      subtitle:
+        "Professional accountants are less likely to make errors, reducing the risk of financial mistakes that could harm your business",
+      caption: "Efficiency",
+    },
+    {
+      title: "Global Reach",
+      subtitle:
+        "Outsourcing can provide access to a global talent pool, offering diverse perspectives and solutions for your financial challenges",
+      caption: "Leverage global talent",
     },
   ];
   return (
     <>
       <TopNav />
       <Container maxWidth="xl">
-        <Grid container spacing={4} sx={{ my: 4 }}>
-          <Grid item xs={12} sm={8} md={6}>
-            <Typography variant={"h4"} fontWeight={500}>
-              Why choose us
+        <Grid container spacing={4} justifyContent={"center"} sx={{ my: 4 }}>
+          <Grid item xs={12}>
+            <Typography variant={"h2"} fontWeight={500} align="center">
+              Accounting Outsourcing
             </Typography>
-            <Typography variant={"subtitle1"} fontWeight={300}>
-              As a full service design, we work closely with our clients to
-              define, design and develop transformative user experiences across
-              all platforms and brand touchpoints.
+            <Typography
+              variant={"subtitle1"}
+              // align={"justify"}
+              textAlign={"justify"}
+              fontSize={"22px"}
+              style={{ margin: "20px 0" }}
+            >
+              In today's dynamic business landscape, companies face an array of
+              challenges, with financial management being a top priority. To
+              excel in this aspect, many businesses are turning to Accounting
+              Outsourcing as a strategic solution. Accounting Outsourcing offers
+              a range of benefits, including cost savings, improved accuracy,
+              and access to specialized expertise.
             </Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={4} sx={{ my: 4 }}>
-          {whyHireUpPoints.map((eachOpt, i) => (
-            <Grid item xs={6} md={4} key={i}>
-              <Card elevation={4} sx={{ height: "100%" }}>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    flex: 1,
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    height: "100%",
-                  }}
-                >
-                  <Box>
-                    <Typography variant="body2" fontWeight={500}>
-                      {eachOpt.title}
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      {eachOpt.subtitle}
-                    </Typography>
-                  </Box>
-                  <Box>
-                    {/* <LinearProgress
-                      variant="determinate"
-                      value={eachOpt.progress}
-                      color={eachOpt.color}
-                    /> */}
-                    <Toolbar disableGutters>
-                      <Typography
-                        variant="subtitle2"
-                        component={"span"}
-                        fontWeight={300}
-                      >
-                        {eachOpt.caption}
+        <Grid container margin={"40px 0px"}>
+          <Typography variant={"h5"} fontWeight={400}>
+            Key Benefits include:
+          </Typography>
+          <Grid container spacing={4} sx={{ my: 4 }}>
+            {whyHireUpPoints.map((eachOpt, i) => (
+              <Grid item xs={6} md={4} key={i}>
+                <Card elevation={4} sx={{ height: "100%" }}>
+                  <CardContent
+                    sx={{
+                      display: "flex",
+                      flex: 1,
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      height: "100%",
+                    }}
+                  >
+                    <Box>
+                      <Typography variant="body2" fontWeight={500}>
+                        {eachOpt.title}
                       </Typography>
-                      <Box sx={{ flexGrow: 1 }} />
-                    </Toolbar>
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+                      <Typography variant="subtitle1">
+                        {eachOpt.subtitle}
+                      </Typography>
+                    </Box>
+                    <Box>
+                      <Toolbar disableGutters>
+                        <Typography
+                          variant="subtitle1"
+                          component={"span"}
+                          fontWeight={400}
+                          style={{ textDecoration: "underline" }}
+                        >
+                          {eachOpt.caption}
+                        </Typography>
+                        <Box sx={{ flexGrow: 1 }} />
+                      </Toolbar>
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Container>
       <Footer />

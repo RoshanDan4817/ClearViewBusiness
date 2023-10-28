@@ -27,41 +27,46 @@ const services = [
     subtitle:
       "Accounting Solutions Tailor-made for Indian and Foreign Businesses.",
     image: accounting,
-    link: "/accountingOutsourcing"
+    link: "/accountingOutsourcing",
   },
   {
     caption: "Bookkeeping",
     subtitle:
       "Bookkeeping services that help enhance efficiency in your business's financial services.",
     image: bookkeeping,
+    link: "/bookKeeping",
   },
   {
     caption: "Accounts Receivable",
     subtitle:
       "Know your debtors better with our customized reports and strive for a better outcome.",
     image: debt,
+    link: "/accountsRecievable",
   },
   {
     caption: "Hire Virtual Accountant",
     subtitle: "Automate your business finances ith Virtual Accountant service.",
     image: accountant,
+    link: "/hireVirtualAssistant",
   },
   {
     caption: "Accounts Payable",
     subtitle:
       "Never default on your payments as we take care of what and when you need to pay.",
     image: payment,
+    link: "/accountsPayable",
   },
   {
     caption: "Payroll Management",
     subtitle:
       "Simplify payroll processing and boost employee satisfaction for your business success.",
     image: payrollManagement,
+    link: "/payrollManagement",
   },
 ];
 
 const Services = forwardRef(() => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Container maxWidth="xl">
       <Grid container spacing={2} sx={{ my: 4 }} id="Home">
@@ -128,7 +133,7 @@ const Services = forwardRef(() => {
             <Card sx={{ display: "flex", height: "100%" }} elevation={4}>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <CardContent sx={{ flex: "1 0 auto" }}>
-                  <span onClick={() => navigate("/accountingOutsourcing")}>
+                  <span onClick={() => navigate(eachService?.link)}>
                     <Typography variant="caption" fontWeight={500}>
                       {eachService.caption}
                     </Typography>
