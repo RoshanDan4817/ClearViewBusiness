@@ -12,11 +12,14 @@ import MenuItem from "@mui/material/MenuItem";
 import { BiDotsVerticalRounded, BiMenu } from "react-icons/bi";
 import ProductLogo from "../assets/logo.png";
 import $ from "jquery";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const pages = ["Home", "About Us", "Services"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const TopNav = React.forwardRef((props, ref) => {
+  const location = useLocation()
+  const navigate = useNavigate()
   const contactRef = props.contactRef || ref;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -35,12 +38,22 @@ const TopNav = React.forwardRef((props, ref) => {
     else if (index === 1) targetId = "AboutUs";
     else if (index === 2) targetId = "Services";
     // else if (index === 3) targetId = "ContactUs";
+    console.log("🚀 ~ file: TopNav.jsx:42 ~ handleCloseNavMenu ~ location:", location)
+    if (location.pathname === "/home") {
+      const targetOffset = $(`#${targetId}`).offset().top;
+      const scrollSpeed = 500; // Set the scroll speed in milliseconds
+      const customY = -130;
+      $("html, body").animate({ scrollTop: targetOffset + customY }, scrollSpeed);
+      setAnchorElNav(null);
+    }
+    else {
+      navigate("/", {
+        state: {
+          targetId: targetId
+        }
+      })
+    }
 
-    const targetOffset = $(`#${targetId}`).offset().top;
-    const scrollSpeed = 500; // Set the scroll speed in milliseconds
-    const customY = -130;
-    $("html, body").animate({ scrollTop: targetOffset + customY }, scrollSpeed);
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {

@@ -19,6 +19,7 @@ import accountsServices from "../assets/accounts-services.jpg";
 import payrollServices from "../assets/payroll-services.jpg";
 import consultingService from "../assets/consulting-service.jpg";
 import teamWork from "../assets/team-work.jpg";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -26,6 +27,7 @@ const services = [
     subtitle:
       "Accounting Solutions Tailor-made for Indian and Foreign Businesses.",
     image: accounting,
+    link: "/accountingOutsourcing"
   },
   {
     caption: "Bookkeeping",
@@ -59,6 +61,7 @@ const services = [
 ];
 
 const Services = forwardRef(() => {
+  const navigate = useNavigate()
   return (
     <Container maxWidth="xl">
       <Grid container spacing={2} sx={{ my: 4 }} id="Home">
@@ -125,9 +128,11 @@ const Services = forwardRef(() => {
             <Card sx={{ display: "flex", height: "100%" }} elevation={4}>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Typography variant="caption" fontWeight={500}>
-                    {eachService.caption}
-                  </Typography>
+                  <span onClick={() => navigate("/accountingOutsourcing")}>
+                    <Typography variant="caption" fontWeight={500}>
+                      {eachService.caption}
+                    </Typography>
+                  </span>
                   <Typography
                     variant="subtitle1"
                     color="text.secondary"
@@ -170,7 +175,7 @@ const Services = forwardRef(() => {
                     fontWeight={300}
                   >
                     In 2018 we established ClearView Business Solutions with a
-                    vision. The Vision was to wnable a=business leaders to
+                    vision. The Vision was to enable business leaders to
                     concentrate on enhancing their organizations core skills. We
                     believe that this could be accomplished by overseeing all of
                     the administrative tasks, including accounting and
