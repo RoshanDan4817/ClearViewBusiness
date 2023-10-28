@@ -41,7 +41,7 @@ const HomeContact = forwardRef((props, ref) => {
                   fontWeight={600}
                   sx={{ color: "background.default" }}
                 >
-                  Interested to work with us
+                  Interested to work with us?
                 </Typography>
                 <Button
                   size="large"
