@@ -74,7 +74,7 @@ const HomeContact = forwardRef((props, ref) => {
           <br />
           <Typography variant="caption">
             {" "}
-            <b>Email:</b> saramma.bino@clearviewbusiness.com
+            <b>Email:</b> saramma.bino@clearviewbusinesses.com
           </Typography>
           <br />
           <Typography variant="caption">
