@@ -18,8 +18,8 @@ const pages = ["Home", "About Us", "Services"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const TopNav = React.forwardRef((props, ref) => {
-  const location = useLocation()
-  const navigate = useNavigate()
+  const location = useLocation();
+  const navigate = useNavigate();
   const contactRef = props.contactRef || ref;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -38,22 +38,26 @@ const TopNav = React.forwardRef((props, ref) => {
     else if (index === 1) targetId = "AboutUs";
     else if (index === 2) targetId = "Services";
     // else if (index === 3) targetId = "ContactUs";
-    console.log("🚀 ~ file: TopNav.jsx:42 ~ handleCloseNavMenu ~ location:", location)
+    console.log(
+      "🚀 ~ file: TopNav.jsx:42 ~ handleCloseNavMenu ~ location:",
+      location
+    );
     if (location.pathname === "/home") {
       const targetOffset = $(`#${targetId}`).offset().top;
       const scrollSpeed = 500; // Set the scroll speed in milliseconds
       const customY = -130;
-      $("html, body").animate({ scrollTop: targetOffset + customY }, scrollSpeed);
+      $("html, body").animate(
+        { scrollTop: targetOffset + customY },
+        scrollSpeed
+      );
       setAnchorElNav(null);
-    }
-    else {
+    } else {
       navigate("/", {
         state: {
-          targetId: targetId
-        }
-      })
+          targetId: targetId,
+        },
+      });
     }
-
   };
 
   const handleCloseUserMenu = () => {
@@ -72,6 +76,7 @@ const TopNav = React.forwardRef((props, ref) => {
           <img
             src={ProductLogo}
             className="product__logo product__logo__a__responsive"
+            onClick={() => navigate("/")}
           />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

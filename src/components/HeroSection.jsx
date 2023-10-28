@@ -50,7 +50,7 @@ function HeroSection() {
               We provide tailored solutions to help you achieve your business
               goals.
             </Typography>
-            <Box sx={{ mt: 3 }}>
+            {/* <Box sx={{ mt: 3 }}>
               <Button
                 variant="contained"
                 color="primary"
@@ -62,7 +62,7 @@ function HeroSection() {
               <Button endIcon={<BiRightArrowAlt />} color="text" size="medium">
                 Explore More
               </Button>
-            </Box>
+            </Box> */}
           </Box>
         </Grid>
         <Grid

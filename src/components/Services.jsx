@@ -20,6 +20,7 @@ import payrollServices from "../assets/payroll-services.jpg";
 import consultingService from "../assets/consulting-service.jpg";
 import teamWork from "../assets/team-work.jpg";
 import { useNavigate } from "react-router-dom";
+import "../styles/styles.css";
 
 const services = [
   {
@@ -134,7 +135,11 @@ const Services = forwardRef(() => {
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <CardContent sx={{ flex: "1 0 auto" }}>
                   <span onClick={() => navigate(eachService?.link)}>
-                    <Typography variant="caption" fontWeight={500}>
+                    <Typography
+                      variant="caption"
+                      fontWeight={500}
+                      className="link-under"
+                    >
                       {eachService.caption}
                     </Typography>
                   </span>
