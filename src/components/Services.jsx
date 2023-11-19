@@ -131,10 +131,22 @@ const Services = forwardRef(() => {
       <Grid container spacing={2}>
         {services.map((eachService, i) => (
           <Grid item xs={12} md={6} lg={4} key={i} sx={{ display: "flex" }}>
-            <Card sx={{ display: "flex", height: "100%" }} elevation={4}>
+            <Card
+              sx={{
+                display: "flex",
+                height: "100%",
+                transition: "all 0.2s ease-in-out",
+                ":hover": {
+                  transform: "scale(1.05)",
+                  cursor: "pointer",
+                  backgroundColor: "#e6e6e6",
+                },
+              }}
+              elevation={4}
+            >
               <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <CardContent sx={{ flex: "1 0 auto" }}>
-                  <span onClick={() => navigate(eachService?.link)}>
+                <span onClick={() => navigate(eachService?.link)}>
+                  <CardContent sx={{ flex: "1 0 auto" }}>
                     <Typography
                       variant="caption"
                       fontWeight={500}
@@ -142,15 +154,16 @@ const Services = forwardRef(() => {
                     >
                       {eachService.caption}
                     </Typography>
-                  </span>
-                  <Typography
-                    variant="subtitle1"
-                    color="text.secondary"
-                    component="div"
-                  >
-                    {eachService.subtitle}
-                  </Typography>
-                </CardContent>
+
+                    <Typography
+                      variant="subtitle1"
+                      color="text.secondary"
+                      component="div"
+                    >
+                      {eachService.subtitle}
+                    </Typography>
+                  </CardContent>
+                </span>
               </Box>
               <CardMedia
                 component="img"

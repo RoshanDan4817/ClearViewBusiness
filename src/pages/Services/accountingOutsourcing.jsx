@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import TopNav from "../../components/TopNav";
 import Footer from "../../components/Footer";
 import {
@@ -74,6 +74,10 @@ export default function AccountingOutsourcing() {
       caption: "Leverage global talent",
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <TopNav />

@@ -80,7 +80,7 @@ export default function WhyUs() {
       <Grid container spacing={4} sx={{ my: 4 }}>
         {whyHireUpPoints.map((eachOpt, i) => (
           <Grid item xs={6} md={4} key={i}>
-            <Card elevation={4} sx={{ height: "100%" }}>
+            <Card elevation={6} sx={{ height: "80%" }}>
               <CardContent
                 sx={{
                   display: "flex",
@@ -98,7 +98,7 @@ export default function WhyUs() {
                     {eachOpt.subtitle}
                   </Typography>
                 </Box>
-                <Box>
+                <Box sx={{ height: "100%" }}>
                   {/* <LinearProgress variant="determinate" value={eachOpt.progress} color={eachOpt.color} /> */}
                   <Toolbar disableGutters>
                     <Typography
