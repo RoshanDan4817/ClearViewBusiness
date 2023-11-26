@@ -1,6 +1,6 @@
 import { Box, CardMedia, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 
 export default function Footer() {
 	return (
@@ -9,7 +9,10 @@ export default function Footer() {
 				<Grid item xs={3}>
 					<Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
 						<CardMedia component="img" sx={{ width: 121, borderRadius: 1 }} image={logo} />
-						<Typography variant="subtitle2" color="text">
+						<Typography variant="subtitle2" color="text" fontSize={"18px"}>
+							Clearview Biz Solutions.
+						</Typography>
+						<Typography variant="subtitle2" color="text" fontSize={"14px"}>
 							All rights reserved.
 						</Typography>
 					</Box>

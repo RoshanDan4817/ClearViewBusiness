@@ -197,7 +197,7 @@ const Services = forwardRef(() => {
                     sx={{ my: 4 }}
                     fontWeight={300}
                   >
-                    In 2018 we established ClearView Business Solutions with a
+                    In 2018 we established Clearview Biz Solutions with a
                     vision. The Vision was to enable business leaders to
                     concentrate on enhancing their organizations core skills. We
                     believe that this could be accomplished by overseeing all of

@@ -26,14 +26,14 @@ function Home() {
 		}
 	}, [location?.state?.targetId])
 	return (
-		<>
+		<div>
 			<TopNav contactRef={contactRef} />
 			<HeroSection homeRef={homeRef} />
 			<Services ref={servicesRef} />
 			<WhyUs />
 			<HomeContact contactRef={contactRef} />
 			<Footer />
-		</>
+		</div>
 	);
 }
 

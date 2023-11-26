@@ -11,7 +11,7 @@ import {
 import React from "react";
 const whyHireUpPoints = [
   {
-    title: "Customized for every business need",
+    title: "Tailored business solutions",
     subtitle: "Service tailor-made for the specific need of your business.",
     caption: "Focus on Core",
     value: 36,

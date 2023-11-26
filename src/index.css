@@ -1,9 +1,11 @@
 body {
 	margin: 0;
+	background: #dfd1d1;
+
 }
 
 .product__logo {
-	width: 120px;
+	width: 90px;
 	height: auto;
 }
 .hero-image {

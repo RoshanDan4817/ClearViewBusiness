@@ -13,7 +13,10 @@ import { BiRightArrowAlt } from "react-icons/bi";
 
 function HeroSection() {
   return (
-    <Container maxWidth="xl">
+    <Container
+      maxWidth="xl"
+      sx={{ background: "#e9e4e4", borderRadius: "20px" }}
+    >
       <Grid container spacing={2} sx={{ height: "70vh" }}>
         <Grid
           item

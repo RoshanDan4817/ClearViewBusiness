@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { BiDotsVerticalRounded, BiMenu } from "react-icons/bi";
-import ProductLogo from "../assets/logo.png";
+import ProductLogo from "../assets/logo1.png";
 import $ from "jquery";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -38,10 +38,6 @@ const TopNav = React.forwardRef((props, ref) => {
     else if (index === 1) targetId = "AboutUs";
     else if (index === 2) targetId = "Services";
     // else if (index === 3) targetId = "ContactUs";
-    console.log(
-      "🚀 ~ file: TopNav.jsx:42 ~ handleCloseNavMenu ~ location:",
-      location
-    );
     if (location.pathname === "/home") {
       const targetOffset = $(`#${targetId}`).offset().top;
       const scrollSpeed = 500; // Set the scroll speed in milliseconds
@@ -73,12 +69,28 @@ const TopNav = React.forwardRef((props, ref) => {
     <AppBar position="sticky" sx={{ m: 0 }} color="background">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img
-            src={ProductLogo}
-            className="product__logo product__logo__a__responsive"
-            onClick={() => navigate("/")}
-          />
-
+        <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              flexGrow: 1,
+            }}
+          >
+            <img
+              src={ProductLogo}
+              className="product__logo product__logo__a__responsive"
+              onClick={() => navigate("/")}
+            />
+            <Typography
+              variant="h6"
+              component="div"
+              style={{ marginLeft: "10px" }}
+            >
+              Clearview Biz Solutions
+            </Typography>
+          </Box>
+          
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
