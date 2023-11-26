@@ -75,6 +75,7 @@ const TopNav = React.forwardRef((props, ref) => {
               alignItems: "center",
               justifyContent: "flex-start",
               flexGrow: 1,
+              marginBottom: "10px"
             }}
           >
             <img
